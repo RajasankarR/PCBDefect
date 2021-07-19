@@ -12,10 +12,10 @@ def hello():
 
         #load images
         print('started')
-        image_path_1 = r"images\light_01_short_14_2_600.jpg"
-        image_path_2 = r"images\light_01_short_14_2_600 - Copy.jpg"
-        image_path_1 = r"images\l_light_01_short_13_3_600.jpg"
-        image_path_2 = r"images\l_light_01_short_13_3_600 - Copy.jpg"
+        image_path_1 = r".\images\light_01_short_14_2_600.jpg"
+        image_path_2 = r".\images\light_01_short_14_2_600 - Copy.jpg"
+        image_path_1 = r".\images\l_light_01_short_13_3_600.jpg"
+        image_path_2 = r".\images\l_light_01_short_13_3_600 - Copy.jpg"
         Azure_connection_string='DefaultEndpointsProtocol=https;AccountName=pcbdefectdata;AccountKey=/heRERHi9/KddKIXuTJBZYbqg9amPfu3Q3EbEIr39vubseXkzKp5EYsYTagQ9N+b/Cxe4Ko57GOaNaNC1hQyIA==;EndpointSuffix=core.windows.net'
         processed_image = image_preprocessing(image_path_1, image_path_2)
         dissimilarity_path = subtract_images(processed_image[0], processed_image[1])

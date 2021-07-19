@@ -129,7 +129,9 @@ def image_preprocessing(image_path_1, image_path_2):
     images = [image_path_1, image_path_2]
     out_path = []
 
+
     for img in images:
+        print('image is ',img)
         (dirname, filename) = os.path.split(img)
         filename = filename.split(".")[0]+ "_BW." + filename.split(".")[1]
         write_path = os.path.join(working_dir, filename)
