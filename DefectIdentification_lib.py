@@ -1,6 +1,9 @@
 import cv2
 import numpy as np
 import os, time, uuid
+import logging
+
+#
 
 from azure.cognitiveservices.vision.customvision.training import CustomVisionTrainingClient
 from azure.cognitiveservices.vision.customvision.prediction import CustomVisionPredictionClient
@@ -17,8 +20,8 @@ Directory="C:\Analytics Projects\DefectDetectionProject"
 confidences_threshold = 10
 
 # Working Folders
-working_dir = 'temp'
-output_dir = 'output'
+working_dir = './temp'
+output_dir = './output'
 
 # create dirs
 os.makedirs(working_dir, exist_ok=True)
@@ -80,7 +83,7 @@ def extract_contours_from_image(image_path, hsv_lower, hsv_upper):
             defect_area['defect_area'] = [(x - offset, y - offset), (x + w + offset, y + h + offset)]
             defect[ROI_number] = defect_area
 
-        except exception as e:
+        except Exception as e:
             print("skipping image " + image_path)
         ROI_number += 1
 
@@ -126,22 +129,41 @@ def classify_defects(image_path, defects):
     return True,filename
 
 def image_preprocessing(image_path_1, image_path_2):
+
+    logger = logging.getLogger(__name__)
+
+    # set log level
+    logger.setLevel(logging.WARNING)
+
+    # define file handler and set formatter
+    file_handler = logging.FileHandler('./logfile.log')
+    formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(name)s : %(message)s')
+    file_handler.setFormatter(formatter)
+
+    # add file handler to logger
+    logger.addHandler(file_handler)
     images = [image_path_1, image_path_2]
     out_path = []
 
+    try:
 
-    for img in images:
-        print('image is ',img)
-        (dirname, filename) = os.path.split(img)
-        filename = filename.split(".")[0]+ "_BW." + filename.split(".")[1]
-        write_path = os.path.join(working_dir, filename)
-        originalImage = cv2.imread(img)
-        grayImage = cv2.cvtColor(originalImage, cv2.COLOR_BGR2GRAY)
+        for img in images:
+            print('image is ',img)
+            (dirname, filename) = os.path.split(img)
+            filename = filename.split(".")[0]+ "_BW." + filename.split(".")[1]
+            write_path = os.path.join(working_dir, filename)
+            logger.info("image is "+img)
+            logger.warning(img)
+            originalImage = cv2.imread(img)
+            grayImage = cv2.cvtColor(originalImage, cv2.COLOR_BGR2GRAY)
 
-        (thresh, blackAndWhiteImage) = cv2.threshold(grayImage, 100, 255, cv2.THRESH_BINARY_INV)
-        
-        cv2.imwrite(write_path, blackAndWhiteImage)
-        out_path.append(write_path)
+            (thresh, blackAndWhiteImage) = cv2.threshold(grayImage, 100, 255, cv2.THRESH_BINARY_INV)
+
+            cv2.imwrite(write_path, blackAndWhiteImage)
+            out_path.append(write_path)
+    except Exception as e:
+        logger.warning(e)
+        print(e)
 
     return out_path
 
@@ -174,15 +196,4 @@ def fn_uploadfile_toBlob(local_file_name):
     status=True
     return status
 
-if __name__=="__main__":
-
-    processed_image =  image_preprocessing(image_path_1, image_path_2)
-    dissimilarity_path = subtract_images(processed_image[0], processed_image[1])
-    defected_areas = extract_contours_from_image(**{
-            "image_path" : dissimilarity_path,
-            "hsv_lower" : [0,150,50],
-            "hsv_upper" : [10,255,255]
-        })
-
-    defect_types = classify_defects(image_path_2, defected_areas) # -> original_test_image, defect_dict
 
