@@ -56,6 +56,7 @@ def hello():
         return {'status':200,'containername':container_name,'filename':filename}
     except Exception as e:
         print(e)
+        return {'status':200,'containername':container_name,'filename':filename,'error':e}
 
 
 
