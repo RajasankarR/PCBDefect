@@ -9,7 +9,6 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     try:
-        
 
         #load images
         print('started')
