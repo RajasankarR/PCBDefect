@@ -1,7 +1,7 @@
-pip install numpy
-pip install opencv-python
-pip install numpy
-pip install azure-cognitiveservices-vision-customvision
-pip install msrest
-pip install flask
-pip install azure-storage-blob
+numpy
+opencv-python
+numpy
+azure-cognitiveservices-vision-customvision
+msrest
+flask
+azure-storage-blob
