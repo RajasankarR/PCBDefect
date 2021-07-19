@@ -1,0 +1,6 @@
+pip install opencv-python
+pip install numpy
+pip install azure-cognitiveservices-vision-customvision
+pip install msrest
+pip install flask
+pip install azure-storage-blob
