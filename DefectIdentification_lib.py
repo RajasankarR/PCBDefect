@@ -30,7 +30,7 @@ def subtract_images(image_path_1, image_path_2):
     image1 = cv2.imread(image_path_1)
     image2 = cv2.imread(image_path_2)
 
-    # Difference image path
+    # Difference image pa  th
     (dirname, filename) = os.path.split(image_path_2)
     filename = filename.split(".")[0]+ "_diff." + filename.split(".")[1]
     write_path = os.path.join(working_dir, filename)
