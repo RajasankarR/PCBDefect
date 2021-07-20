@@ -12,8 +12,8 @@ def hello():
 
         #load images
         print('started')
-        image_path_1 = "light_01_short_14_2_600.jpg"
-        image_path_2 = "light_01_short_14_2_600 - Copy.jpg"
+        image_path_1 = ".\images\light_01_short_14_2_600.jpg"
+        image_path_2 = ".\images\light_01_short_14_2_600 - Copy.jpg"
         #image_path_1 = r".\images\l_light_01_short_13_3_600.jpg"
         #image_path_2 = r".\images\l_light_01_short_13_3_600 - Copy.jpg"
         Azure_connection_string='DefaultEndpointsProtocol=https;AccountName=pcbdefectdata;AccountKey=/heRERHi9/KddKIXuTJBZYbqg9amPfu3Q3EbEIr39vubseXkzKp5EYsYTagQ9N+b/Cxe4Ko57GOaNaNC1hQyIA==;EndpointSuffix=core.windows.net'

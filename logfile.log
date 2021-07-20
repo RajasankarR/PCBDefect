@@ -42,3 +42,27 @@
 2021-07-19 23:40:46,511 : WARNING : DefectIdentification_lib : .\images\l_light_01_short_13_3_600 - Copy.jpg
 2021-07-19 23:40:46,511 : WARNING : DefectIdentification_lib : .\images\l_light_01_short_13_3_600 - Copy.jpg
 2021-07-19 23:40:46,511 : WARNING : DefectIdentification_lib : .\images\l_light_01_short_13_3_600 - Copy.jpg
+2021-07-20 08:50:23,501 : WARNING : DefectIdentification_lib : light_01_short_14_2_600.jpg
+2021-07-20 08:50:23,523 : WARNING : DefectIdentification_lib : OpenCV(4.5.2) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-dn5w5exm\opencv\modules\imgproc\src\color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
+
+2021-07-20 08:53:51,895 : WARNING : DefectIdentification_lib : light_01_short_14_2_600.jpg
+2021-07-20 08:53:51,895 : WARNING : DefectIdentification_lib : light_01_short_14_2_600.jpg
+2021-07-20 08:53:51,896 : WARNING : DefectIdentification_lib : OpenCV(4.5.2) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-dn5w5exm\opencv\modules\imgproc\src\color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
+
+2021-07-20 08:53:51,896 : WARNING : DefectIdentification_lib : OpenCV(4.5.2) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-dn5w5exm\opencv\modules\imgproc\src\color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
+
+2021-07-20 08:54:02,146 : WARNING : DefectIdentification_lib : light_01_short_14_2_600.jpg
+2021-07-20 08:54:02,146 : WARNING : DefectIdentification_lib : light_01_short_14_2_600.jpg
+2021-07-20 08:54:02,146 : WARNING : DefectIdentification_lib : light_01_short_14_2_600.jpg
+2021-07-20 08:54:02,161 : WARNING : DefectIdentification_lib : OpenCV(4.5.2) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-dn5w5exm\opencv\modules\imgproc\src\color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
+
+2021-07-20 08:54:02,161 : WARNING : DefectIdentification_lib : OpenCV(4.5.2) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-dn5w5exm\opencv\modules\imgproc\src\color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
+
+2021-07-20 08:54:02,161 : WARNING : DefectIdentification_lib : OpenCV(4.5.2) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-dn5w5exm\opencv\modules\imgproc\src\color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
+
+2021-07-20 09:01:40,506 : WARNING : DefectIdentification_lib : .\images\light_01_short_14_2_600.jpg
+2021-07-20 09:01:40,618 : WARNING : DefectIdentification_lib : .\images\light_01_short_14_2_600 - Copy.jpg
+2021-07-20 09:01:57,063 : WARNING : DefectIdentification_lib : .\images\light_01_short_14_2_600.jpg
+2021-07-20 09:01:57,063 : WARNING : DefectIdentification_lib : .\images\light_01_short_14_2_600.jpg
+2021-07-20 09:01:57,096 : WARNING : DefectIdentification_lib : .\images\light_01_short_14_2_600 - Copy.jpg
+2021-07-20 09:01:57,096 : WARNING : DefectIdentification_lib : .\images\light_01_short_14_2_600 - Copy.jpg

@@ -146,7 +146,6 @@ def image_preprocessing(image_path_1, image_path_2):
     out_path = []
 
     try:
-
         for img in images:
             print('image is ',img)
             (dirname, filename) = os.path.split(img)
